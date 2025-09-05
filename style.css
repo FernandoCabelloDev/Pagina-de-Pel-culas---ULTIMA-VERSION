@@ -1,0 +1,119 @@
+/* Variables de color (reutilizables) */
+:root {
+    --color-fondo: #0f111a;
+    --color-tarjeta: #1f2230;
+    --color-boton: #e50914;
+    --color-texto: #f0f0f5;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+/* Header */
+.titulo-pagina {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filtro-btn {
+    background: var(--color-tarjeta);
+    border: none;
+    color: var(--color-texto);
+    padding: 10px 15px;
+    border-radius: 10px; /* Bordes más redondeados */
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filtro-btn:hover, .filtro-btn.activo {
+    background: var(--color-boton);
+    transform: translateY(-2px);
+}
+
+/* Contenedor de películas */
+.peliculas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+/* Tarjetas */
+.movie-card {
+    background: var(--color-tarjeta);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.301);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 330px; /* Altura fija para uniformidad */
+    object-fit: cover;
+    border-bottom: 2px solid var(--color-boton);
+}
+
+.movie-title {
+    font-size: 1.1rem;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Botón */
+.boton {
+    display: block;
+    background: var(--color-boton);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background: #f40612;
+    letter-spacing: 1px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .peliculas {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/*PRUEBAS*/
+
+
